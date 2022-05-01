@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Sabrina"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-28 10:50:03 "/>
+        <attribute name="created" value="U2FicmluYTtERVNLVE9QLUVETTJKRDU7MjAyMi0wMy0yODsiMDc6NDU6MjMgIjsyOTQx"/>
+        <attribute name="edited" value="U2FicmluYTtERVNLVE9QLUVETTJKRDU7MjAyMi0wMy0yODsiMTA6NTA6MDMgIjsxOzMwMzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cliente" type="String" array="False" size=""/>
+            <declare name="cartao" type="Boolean" array="False" size=""/>
+            <declare name="numero" type="String" array="False" size=""/>
+            <input variable="cliente"/>
+            <input variable="cartao"/>
+            <if expression="cartao">
+                <then>
+                    <input variable="numero"/>
+                </then>
+                <else>
+                    <output expression="&quot;A loja so aceita cartao de credito&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
