@@ -1,0 +1,353 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 40664 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/share/memory/arena.cpp:197), pid=5784, tid=3476
+#
+# JRE version: OpenJDK Runtime Environment Zulu11.54+25-CA (11.0.14.1+1) (build 11.0.14.1+1-LTS)
+# Java VM: OpenJDK Client VM Zulu11.54+25-CA (11.0.14.1+1-LTS, mixed mode, parallel gc, windows-x86)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -Dfile.encoding=utf8 -DwatchParentProcess=false -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=c:\Users\Sabrina\AppData\Roaming\Code\User\workspaceStorage\efbd7a491cc8d681b5752d61acbfedea\redhat.java -Xverify:none c:\Users\Sabrina\.vscode\extensions\redhat.java-1.6.0-win32-ia32\server\plugins\org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar -configuration c:\Users\Sabrina\AppData\Roaming\Code\User\globalStorage\redhat.java\1.6.0\config_win -data c:\Users\Sabrina\AppData\Roaming\Code\User\workspaceStorage\efbd7a491cc8d681b5752d61acbfedea\redhat.java\jdt_ws
+
+Host: Intel(R) Core(TM) i3-2330M CPU @ 2.20GHz, 4 cores, 3G,  Windows 10 Build 10586 (10.0.10586.0)
+Time: Tue May 31 14:51:22 2022 Hora oficial do Brasil elapsed time: 2.225178 seconds (0d 0h 0m 2s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x015a6000):  JavaThread "main" [_thread_in_vm, id=3476, stack(0x007b0000,0x00800000)]
+
+Stack: [0x007b0000,0x00800000],  sp=0x007fe328,  free space=312k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x36427f]
+V  [jvm.dll+0x3648e5]
+V  [jvm.dll+0xe5fb9]
+V  [jvm.dll+0x9660]
+V  [jvm.dll+0x9a87]
+V  [jvm.dll+0x2b0ccd]
+V  [jvm.dll+0x9ed50]
+V  [jvm.dll+0x9e158]
+V  [jvm.dll+0x31c19d]
+V  [jvm.dll+0x31d1e0]
+V  [jvm.dll+0x31d574]
+V  [jvm.dll+0x31d336]
+V  [jvm.dll+0xe1a1e]
+V  [jvm.dll+0x163bc0]
+j  java.lang.invoke.VarHandle.<clinit>()V+45 java.base@11.0.14.1
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1685a9]
+V  [jvm.dll+0x2854bb]
+V  [jvm.dll+0x168299]
+V  [jvm.dll+0x157cf5]
+V  [jvm.dll+0x15787b]
+V  [jvm.dll+0x157a8f]
+V  [jvm.dll+0x15787b]
+V  [jvm.dll+0x157a8f]
+V  [jvm.dll+0x15787b]
+V  [jvm.dll+0x161f92]
+j  java.lang.invoke.VarHandles.makeFieldHandle(Ljava/lang/invoke/MemberName;Ljava/lang/Class;Ljava/lang/Class;Z)Ljava/lang/invoke/VarHandle;+256 java.base@11.0.14.1
+j  java.lang.invoke.MethodHandles$Lookup.getFieldVarHandleCommon(BBLjava/lang/Class;Ljava/lang/invoke/MemberName;Ljava/lang/invoke/MemberName;Z)Ljava/lang/invoke/VarHandle;+261 java.base@11.0.14.1
+j  java.lang.invoke.MethodHandles$Lookup.getFieldVarHandle(BBLjava/lang/Class;Ljava/lang/invoke/MemberName;Ljava/lang/invoke/MemberName;)Ljava/lang/invoke/VarHandle;+12 java.base@11.0.14.1
+j  java.lang.invoke.MethodHandles$Lookup.findVarHandle(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/invoke/VarHandle;+28 java.base@11.0.14.1
+j  java.util.concurrent.atomic.AtomicBoolean.<clinit>()V+12 java.base@11.0.14.1
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1685a9]
+V  [jvm.dll+0x2854bb]
+V  [jvm.dll+0x168299]
+V  [jvm.dll+0x157cf5]
+V  [jvm.dll+0x15787b]
+V  [jvm.dll+0x161f92]
+j  java.io.RandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;Z)V+5 java.base@11.0.14.1
+j  java.io.RandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;)V+4 java.base@11.0.14.1
+j  java.util.zip.ZipFile$Source.<init>(Ljava/util/zip/ZipFile$Source$Key;ZLjava/util/zip/ZipCoder;)V+89 java.base@11.0.14.1
+j  java.util.zip.ZipFile$Source.get(Ljava/io/File;ZLjava/util/zip/ZipCoder;)Ljava/util/zip/ZipFile$Source;+99 java.base@11.0.14.1
+j  java.util.zip.ZipFile$CleanableResource.<init>(Ljava/util/zip/ZipFile;Ljava/io/File;I)V+58 java.base@11.0.14.1
+j  java.util.zip.ZipFile$CleanableResource.get(Ljava/util/zip/ZipFile;Ljava/io/File;I)Ljava/util/zip/ZipFile$CleanableResource;+66 java.base@11.0.14.1
+j  java.util.zip.ZipFile.<init>(Ljava/io/File;ILjava/nio/charset/Charset;)V+123 java.base@11.0.14.1
+j  java.util.zip.ZipFile.<init>(Ljava/io/File;I)V+6 java.base@11.0.14.1
+j  java.util.jar.JarFile.<init>(Ljava/io/File;ZILjava/lang/Runtime$Version;)V+3 java.base@11.0.14.1
+j  java.util.jar.JarFile.<init>(Ljava/io/File;ZI)V+7 java.base@11.0.14.1
+j  java.util.jar.JarFile.<init>(Ljava/lang/String;)V+11 java.base@11.0.14.1
+j  sun.launcher.LauncherHelper.getMainClassFromJar(Ljava/lang/String;)Ljava/lang/String;+5 java.base@11.0.14.1
+j  sun.launcher.LauncherHelper.loadMainClass(ILjava/lang/String;)Ljava/lang/Class;+34 java.base@11.0.14.1
+j  sun.launcher.LauncherHelper.checkAndLoadMain(ZILjava/lang/String;)Ljava/lang/Class;+42 java.base@11.0.14.1
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1685a9]
+V  [jvm.dll+0x2854bb]
+V  [jvm.dll+0x168299]
+V  [jvm.dll+0x1a45f2]
+V  [jvm.dll+0x1a0f75]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.invoke.VarHandle.<clinit>()V+45 java.base@11.0.14.1
+v  ~StubRoutines::call_stub
+j  java.lang.invoke.VarHandles.makeFieldHandle(Ljava/lang/invoke/MemberName;Ljava/lang/Class;Ljava/lang/Class;Z)Ljava/lang/invoke/VarHandle;+256 java.base@11.0.14.1
+j  java.lang.invoke.MethodHandles$Lookup.getFieldVarHandleCommon(BBLjava/lang/Class;Ljava/lang/invoke/MemberName;Ljava/lang/invoke/MemberName;Z)Ljava/lang/invoke/VarHandle;+261 java.base@11.0.14.1
+j  java.lang.invoke.MethodHandles$Lookup.getFieldVarHandle(BBLjava/lang/Class;Ljava/lang/invoke/MemberName;Ljava/lang/invoke/MemberName;)Ljava/lang/invoke/VarHandle;+12 java.base@11.0.14.1
+j  java.lang.invoke.MethodHandles$Lookup.findVarHandle(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/invoke/VarHandle;+28 java.base@11.0.14.1
+j  java.util.concurrent.atomic.AtomicBoolean.<clinit>()V+12 java.base@11.0.14.1
+v  ~StubRoutines::call_stub
+j  java.io.RandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;Z)V+5 java.base@11.0.14.1
+j  java.io.RandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;)V+4 java.base@11.0.14.1
+j  java.util.zip.ZipFile$Source.<init>(Ljava/util/zip/ZipFile$Source$Key;ZLjava/util/zip/ZipCoder;)V+89 java.base@11.0.14.1
+j  java.util.zip.ZipFile$Source.get(Ljava/io/File;ZLjava/util/zip/ZipCoder;)Ljava/util/zip/ZipFile$Source;+99 java.base@11.0.14.1
+j  java.util.zip.ZipFile$CleanableResource.<init>(Ljava/util/zip/ZipFile;Ljava/io/File;I)V+58 java.base@11.0.14.1
+j  java.util.zip.ZipFile$CleanableResource.get(Ljava/util/zip/ZipFile;Ljava/io/File;I)Ljava/util/zip/ZipFile$CleanableResource;+66 java.base@11.0.14.1
+j  java.util.zip.ZipFile.<init>(Ljava/io/File;ILjava/nio/charset/Charset;)V+123 java.base@11.0.14.1
+j  java.util.zip.ZipFile.<init>(Ljava/io/File;I)V+6 java.base@11.0.14.1
+j  java.util.jar.JarFile.<init>(Ljava/io/File;ZILjava/lang/Runtime$Version;)V+3 java.base@11.0.14.1
+j  java.util.jar.JarFile.<init>(Ljava/io/File;ZI)V+7 java.base@11.0.14.1
+j  java.util.jar.JarFile.<init>(Ljava/lang/String;)V+11 java.base@11.0.14.1
+j  sun.launcher.LauncherHelper.getMainClassFromJar(Ljava/lang/String;)Ljava/lang/String;+5 java.base@11.0.14.1
+j  sun.launcher.LauncherHelper.loadMainClass(ILjava/lang/String;)Ljava/lang/Class;+34 java.base@11.0.14.1
+j  sun.launcher.LauncherHelper.checkAndLoadMain(ZILjava/lang/String;)Ljava/lang/Class;+42 java.base@11.0.14.1
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x46545590, length=9, elements={
+0x015a6000, 0x0169c400, 0x0169e800, 0x464fc000,
+0x464fcc00, 0x464fd800, 0x46500800, 0x46501400,
+0x46574400
+}
+
+Java Threads: ( => current thread )
+=>0x015a6000 JavaThread "main" [_thread_in_vm, id=3476, stack(0x007b0000,0x00800000)]
+  0x0169c400 JavaThread "Reference Handler" daemon [_thread_blocked, id=5144, stack(0x465d0000,0x46620000)]
+  0x0169e800 JavaThread "Finalizer" daemon [_thread_blocked, id=2796, stack(0x46620000,0x46670000)]
+  0x464fc000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5352, stack(0x46770000,0x467c0000)]
+  0x464fcc00 JavaThread "Attach Listener" daemon [_thread_blocked, id=4864, stack(0x467c0000,0x46810000)]
+  0x464fd800 JavaThread "Service Thread" daemon [_thread_blocked, id=328, stack(0x46810000,0x46860000)]
+  0x46500800 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=1672, stack(0x46860000,0x468b0000)]
+  0x46501400 JavaThread "Sweeper thread" daemon [_thread_blocked, id=6064, stack(0x468b0000,0x46900000)]
+  0x46574400 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=888, stack(0x46900000,0x46950000)]
+
+Other Threads:
+  0x0169a400 VMThread "VM Thread" [stack: 0x03770000,0x037c0000] [id=5912]
+  0x465ce400 WatcherThread [stack: 0x46950000,0x469a0000] [id=4432]
+  0x015b9400 GCTaskThread "ParGC Thread#0" [stack: 0x03720000,0x03770000] [id=216]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 29952K, used 2586K [0x2e2c0000, 0x30400000, 0x43800000)
+  eden space 25856K, 10% used [0x2e2c0000,0x2e546b60,0x2fc00000)
+  from space 4096K, 0% used [0x30000000,0x30000000,0x30400000)
+  to   space 4096K, 0% used [0x2fc00000,0x2fc00000,0x30000000)
+ ParOldGen       total 68352K, used 0K [0x03800000, 0x07ac0000, 0x2e2c0000)
+  object space 68352K, 0% used [0x03800000,0x03800000,0x07ac0000)
+ Metaspace       used 3614K, capacity 3655K, committed 3776K, reserved 4480K
+
+Card table byte_map: [0x43800000,0x43a10000] _byte_map_base: 0x437e4000
+
+Marking Bits: (ParMarkBitMap*) 0x55a71200
+ Begin Bits: [0x43b70000, 0x44b70000)
+ End Bits:   [0x44b70000, 0x45b70000)
+
+Polling page: 0x00580000
+
+Metaspace:
+
+Usage:
+    3.57 MB capacity,     3.53 MB ( 99%) used,    36.60 KB (  1%) free+waste,     4.30 KB ( <1%) overhead. 
+
+Virtual space:
+      4.38 MB reserved,       3.69 MB ( 84%) committed 
+
+Chunk freelists:
+25.00 KB
+
+MaxMetaspaceSize: 4.00 GB
+No class space
+Initial GC threshold: 12.00 MB
+Current GC threshold: 12.00 MB
+CDS: off
+
+CodeCache: size=32768Kb used=584Kb max_used=584Kb free=32183Kb
+ bounds [0x016a0000, 0x01738000, 0x036a0000]
+ total_blobs=236 nmethods=80 adapters=89
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (20 events):
+Event: 1.544 Thread 0x46500800   69             java.lang.StringLatin1::lastIndexOf (40 bytes)
+Event: 1.545 Thread 0x46500800 nmethod 69 0x0172e388 code [0x0172e4a0, 0x0172e5a0]
+Event: 1.547 Thread 0x46500800   70             java.util.HashMap$KeyIterator::next (8 bytes)
+Event: 1.547 Thread 0x46500800 nmethod 70 0x0172e648 code [0x0172e760, 0x0172e7fc]
+Event: 1.551 Thread 0x46500800   72             java.util.concurrent.ConcurrentHashMap::get (162 bytes)
+Event: 1.551 Thread 0x46500800 nmethod 72 0x0172eb48 code [0x0172ecb0, 0x0172ef60]
+Event: 1.551 Thread 0x46500800   73   !         java.lang.ref.ReferenceQueue::poll (28 bytes)
+Event: 1.552 Thread 0x46500800 nmethod 73 0x0172f1c8 code [0x0172f2f0, 0x0172f51c]
+Event: 1.553 Thread 0x46500800   74             java.lang.WeakPairMap::expungeStaleAssociations (31 bytes)
+Event: 1.553 Thread 0x46500800 nmethod 74 0x0172f608 code [0x0172f750, 0x0172fa14]
+Event: 1.553 Thread 0x46500800   75             java.lang.WeakPairMap$Pair::hashCode (10 bytes)
+Event: 1.553 Thread 0x46500800 nmethod 75 0x0172fbc8 code [0x0172fcf0, 0x0172fd98]
+Event: 1.553 Thread 0x46500800   76             java.lang.WeakPairMap::get (17 bytes)
+Event: 1.554 Thread 0x46500800 nmethod 76 0x0172fe08 code [0x0172ff80, 0x017303e8]
+Event: 1.554 Thread 0x46500800   77             java.lang.WeakPairMap$Pair::lookup (10 bytes)
+Event: 1.555 Thread 0x46500800 nmethod 77 0x01730688 code [0x017307b0, 0x01730988]
+Event: 1.555 Thread 0x46500800   78             java.lang.WeakPairMap$Pair$Lookup::<init> (21 bytes)
+Event: 1.556 Thread 0x46500800 nmethod 78 0x01730a88 code [0x01730bb0, 0x01730d38]
+Event: 1.556 Thread 0x46500800   79             java.lang.WeakPairMap$Pair$Lookup::hashCode (12 bytes)
+Event: 1.556 Thread 0x46500800 nmethod 79 0x01730e08 code [0x01730f30, 0x01730fe8]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (20 events):
+Event: 2.172 loading class java/io/DataInput
+Event: 2.172 loading class java/io/DataInput done
+Event: 2.172 loading class java/io/RandomAccessFile done
+Event: 2.172 loading class java/io/RandomAccessFile$2
+Event: 2.172 loading class jdk/internal/misc/JavaIORandomAccessFileAccess
+Event: 2.172 loading class jdk/internal/misc/JavaIORandomAccessFileAccess done
+Event: 2.172 loading class java/io/RandomAccessFile$2 done
+Event: 2.173 loading class java/util/concurrent/atomic/AtomicBoolean
+Event: 2.173 loading class java/util/concurrent/atomic/AtomicBoolean done
+Event: 2.173 loading class java/lang/invoke/VarHandles
+Event: 2.173 loading class java/lang/invoke/VarHandles done
+Event: 2.173 loading class java/lang/invoke/VarHandleInts$FieldInstanceReadWrite
+Event: 2.173 loading class java/lang/invoke/VarHandleInts$FieldInstanceReadOnly
+Event: 2.173 loading class java/lang/invoke/VarHandleInts$FieldInstanceReadOnly done
+Event: 2.173 loading class java/lang/invoke/VarHandleInts$FieldInstanceReadWrite done
+Event: 2.173 loading class java/lang/invoke/VarHandle$1
+Event: 2.173 loading class java/lang/invoke/VarHandle$1 done
+Event: 2.173 loading class jdk/internal/util/Preconditions$1
+Event: 2.173 loading class jdk/internal/util/Preconditions$1 done
+Event: 2.173 loading class java/lang/invoke/VarHandleGuards
+
+
+Dynamic libraries:
+0x00990000 - 0x0099c000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\java.exe
+0x77c00000 - 0x77d7b000 	C:\Windows\SYSTEM32\ntdll.dll
+0x75760000 - 0x757f6000 	C:\Windows\system32\KERNEL32.DLL
+0x74c10000 - 0x74d8f000 	C:\Windows\system32\KERNELBASE.dll
+0x73490000 - 0x73522000 	C:\Windows\system32\apphelp.dll
+0x57f20000 - 0x57f34000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\jli.dll
+0x76c30000 - 0x76d68000 	C:\Windows\system32\USER32.dll
+0x75600000 - 0x75755000 	C:\Windows\system32\GDI32.dll
+0x57f00000 - 0x57f13000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\VCRUNTIME140.dll
+0x73d50000 - 0x73e31000 	C:\Windows\SYSTEM32\ucrtbase.dll
+0x6a330000 - 0x6a53f000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_d3c2e4e965da4528\COMCTL32.dll
+0x77070000 - 0x7712e000 	C:\Windows\system32\msvcrt.dll
+0x779e0000 - 0x77b9d000 	C:\Windows\system32\combase.dll
+0x77210000 - 0x772d2000 	C:\Windows\system32\RPCRT4.dll
+0x753a0000 - 0x753f8000 	C:\Windows\system32\bcryptPrimitives.dll
+0x76c00000 - 0x76c2f000 	C:\Windows\system32\IMM32.DLL
+0x572a0000 - 0x5730f000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\msvcp140.dll
+0x555f0000 - 0x55aca000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\client\jvm.dll
+0x75480000 - 0x754fb000 	C:\Windows\system32\ADVAPI32.dll
+0x76f00000 - 0x76f44000 	C:\Windows\system32\sechost.dll
+0x77140000 - 0x77146000 	C:\Windows\system32\PSAPI.DLL
+0x73430000 - 0x73438000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x77160000 - 0x771bf000 	C:\Windows\system32\WS2_32.dll
+0x733d0000 - 0x733f4000 	C:\Windows\SYSTEM32\WINMM.dll
+0x6ef40000 - 0x6ef48000 	C:\Windows\SYSTEM32\VERSION.dll
+0x733a0000 - 0x733c3000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x74bd0000 - 0x74c07000 	C:\Windows\system32\cfgmgr32.dll
+0x74980000 - 0x7498c000 	C:\Windows\system32\kernel.appcore.dll
+0x68150000 - 0x6815d000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\verify.dll
+0x6ba10000 - 0x6bb4f000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x6af80000 - 0x6afa1000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x57800000 - 0x57822000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\java.dll
+0x58bb0000 - 0x58bb9000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\jimage.dll
+0x57eb0000 - 0x57ec4000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\zip.dll
+0x75800000 - 0x76bfe000 	C:\Windows\system32\SHELL32.dll
+0x74ea0000 - 0x7539a000 	C:\Windows\system32\windows.storage.dll
+0x771c0000 - 0x77205000 	C:\Windows\system32\shlwapi.dll
+0x774b0000 - 0x7753d000 	C:\Windows\system32\shcore.dll
+0x74990000 - 0x749d4000 	C:\Windows\system32\powrprof.dll
+0x749e0000 - 0x749ef000 	C:\Windows\system32\profapi.dll
+0x57e90000 - 0x57ea4000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\net.dll
+0x6de70000 - 0x6df0b000 	C:\Windows\SYSTEM32\WINHTTP.dll
+0x74380000 - 0x743d0000 	C:\Windows\system32\mswsock.dll
+0x57e80000 - 0x57e8f000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\nio.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_d3c2e4e965da4528;C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\client
+
+VM Arguments:
+jvm_args: --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -Dfile.encoding=utf8 -DwatchParentProcess=false -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=c:\Users\Sabrina\AppData\Roaming\Code\User\workspaceStorage\efbd7a491cc8d681b5752d61acbfedea\redhat.java -Xverify:none 
+java_command: c:\Users\Sabrina\.vscode\extensions\redhat.java-1.6.0-win32-ia32\server\plugins\org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar -configuration c:\Users\Sabrina\AppData\Roaming\Code\User\globalStorage\redhat.java\1.6.0\config_win -data c:\Users\Sabrina\AppData\Roaming\Code\User\workspaceStorage\efbd7a491cc8d681b5752d61acbfedea\redhat.java\jdt_ws
+java_class_path (initial): c:\Users\Sabrina\.vscode\extensions\redhat.java-1.6.0-win32-ia32\server\plugins\org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+    uintx AdaptiveSizePolicyWeight                 = 90                                        {product} {command line}
+     bool BytecodeVerificationLocal                = false                                     {product} {command line}
+     bool BytecodeVerificationRemote               = false                                     {product} {command line}
+    uintx GCTimeRatio                              = 4                                         {product} {command line}
+     bool HeapDumpOnOutOfMemoryError               = true                                   {manageable} {command line}
+    ccstr HeapDumpPath                             = c:\Users\Sabrina\AppData\Roaming\Code\User\workspaceStorage\efbd7a491cc8d681b5752d61acbfedea\redhat.java         {manageable} {command line}
+   size_t InitialHeapSize                          = 104857600                                 {product} {command line}
+   size_t MaxHeapSize                              = 1073741824                                {product} {command line}
+   size_t MaxNewSize                               = 357826560                                 {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 262144                                    {product} {ergonomic}
+   size_t NewSize                                  = 34865152                                  {product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 0                                      {pd product} {ergonomic}
+   size_t OldSize                                  = 69992448                                  {product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+     bool ThreadLocalHandshakes                    = false                                  {pd product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+     bool UseParallelGC                            = true                                      {product} {command line}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686
+PATH=C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\ProgramData\UNIVALI\Portugol Studio;C:\Program Files\Git\cmd;C:\Users\Sabrina\AppData\Local\Programs\Python\Python39-32\Scripts\;C:\Users\Sabrina\AppData\Local\Programs\Python\Python39-32\;C:\Program Files\JetBrains\PyCharm Community Edition 2018.3.7\bin;;C:\Users\Sabrina\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.4\bin;
+USERNAME=Sabrina
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 Build 10586 (10.0.10586.0)
+OS uptime: 0 days 2:00 hours
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7 microcode 0x29, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 3493M (774M free)
+TotalPageFile size 3493M (AvailPageFile size 12M), user-mode portion of virtual address-space 2047M (860M free)
+current process WorkingSet (physical memory assigned to process): 19M, peak: 19M
+current process commit charge ("private bytes"): 147M, peak: 147M
+
+vm_info: OpenJDK Client VM (11.0.14.1+1-LTS) for windows-x86 JRE (Zulu11.54+25-CA) (11.0.14.1+1-LTS), built on Feb  7 2022 20:22:53 by "zulu_re" with MS VC++ 15.9 (VS2017)
+
+END.

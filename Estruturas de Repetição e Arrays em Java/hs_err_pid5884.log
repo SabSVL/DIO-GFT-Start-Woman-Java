@@ -1,0 +1,239 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32768 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/share/memory/allocation.cpp:46), pid=5884, tid=5536
+#
+# JRE version:  (11.0.14.1+1) (build )
+# Java VM: OpenJDK Client VM (11.0.14.1+1-LTS, mixed mode, parallel gc, windows-x86)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -Dfile.encoding=utf8 -DwatchParentProcess=false -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xverify:none c:\Users\Sabrina\.vscode\extensions\redhat.java-1.6.0-win32-ia32\server\plugins\org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar -configuration c:\Users\Sabrina\AppData\Roaming\Code\User\globalStorage\redhat.java\1.6.0\config_ss_win -data c:\Users\Sabrina\AppData\Roaming\Code\User\workspaceStorage\efbd7a491cc8d681b5752d61acbfedea\redhat.java\ss_ws
+
+Host: Intel(R) Core(TM) i3-2330M CPU @ 2.20GHz, 4 cores, 3G,  Windows 10 Build 10586 (10.0.10586.0)
+Time: Tue May 31 14:51:20 2022 Hora oficial do Brasil elapsed time: 0.518467 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00856800):  JavaThread "Unknown thread" [_thread_in_vm, id=5536, stack(0x00640000,0x00690000)]
+
+Stack: [0x00640000,0x00690000],  sp=0x0068f410,  free space=317k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x36427f]
+V  [jvm.dll+0x3648e5]
+V  [jvm.dll+0xe5fb9]
+V  [jvm.dll+0x8650]
+V  [jvm.dll+0x299205]
+V  [jvm.dll+0x2a02b6]
+V  [jvm.dll+0x153c02]
+V  [jvm.dll+0x33b2ab]
+V  [jvm.dll+0x1a3393]
+V  [jvm.dll+0x1a4faf]
+C  [jli.dll+0x4774]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000edd18, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0086a000 GCTaskThread "ParGC Thread#0" [stack: 0x006c0000,0x00710000] [id=5148]
+
+=>0x00856800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=5536, stack(0x00640000,0x00690000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 29952K, used 517K [0x2e2c0000, 0x30400000, 0x43800000)
+  eden space 25856K, 2% used [0x2e2c0000,0x2e341488,0x2fc00000)
+  from space 4096K, 0% used [0x30000000,0x30000000,0x30400000)
+  to   space 4096K, 0% used [0x2fc00000,0x2fc00000,0x30000000)
+ ParOldGen       total 68352K, used 0K [0x03800000, 0x07ac0000, 0x2e2c0000)
+  object space 68352K, 0% used [0x03800000,0x03800000,0x07ac0000)
+ Metaspace       used 797K, capacity 2240K, committed 2240K, reserved 4480K
+
+Card table byte_map: [0x43800000,0x43a10000] _byte_map_base: 0x437e4000
+
+Marking Bits: (ParMarkBitMap*) 0x55a71200
+ Begin Bits: [0x43b70000, 0x44b70000)
+ End Bits:   [0x44b70000, 0x45b70000)
+
+Polling page: 0x006a0000
+
+Metaspace:
+
+Usage:
+    2.19 MB capacity,   797.27 KB ( 36%) used,     1.41 MB ( 64%) free+waste,    40 bytes ( <1%) overhead. 
+
+Virtual space:
+      4.38 MB reserved,       2.19 MB ( 50%) committed 
+
+Chunk freelists:
+0 bytes
+
+MaxMetaspaceSize: 4.00 GB
+No class space
+Initial GC threshold: 12.00 MB
+Current GC threshold: 4.00 GB
+CDS: off
+
+CodeCache: size=32768Kb used=127Kb max_used=246Kb free=32640Kb
+ bounds [0x01710000, 0x01750000, 0x03710000]
+ total_blobs=50 nmethods=0 adapters=34
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+ full_count=0
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (20 events):
+Event: 0.397 loading class java/lang/Float
+Event: 0.398 loading class java/lang/Number
+Event: 0.398 loading class java/lang/Number done
+Event: 0.398 loading class java/lang/Float done
+Event: 0.398 loading class java/lang/Double
+Event: 0.399 loading class java/lang/Double done
+Event: 0.399 loading class java/lang/Byte
+Event: 0.399 loading class java/lang/Byte done
+Event: 0.399 loading class java/lang/Short
+Event: 0.399 loading class java/lang/Short done
+Event: 0.399 loading class java/lang/Integer
+Event: 0.403 loading class java/lang/Integer done
+Event: 0.403 loading class java/lang/Long
+Event: 0.404 loading class java/lang/Long done
+Event: 0.404 loading class java/util/Iterator
+Event: 0.404 loading class java/util/Iterator done
+Event: 0.410 loading class java/lang/NullPointerException
+Event: 0.410 loading class java/lang/NullPointerException done
+Event: 0.410 loading class java/lang/ArithmeticException
+Event: 0.410 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00990000 - 0x0099c000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\java.exe
+0x77c00000 - 0x77d7b000 	C:\Windows\SYSTEM32\ntdll.dll
+0x75760000 - 0x757f6000 	C:\Windows\system32\KERNEL32.DLL
+0x74c10000 - 0x74d8f000 	C:\Windows\system32\KERNELBASE.dll
+0x73490000 - 0x73522000 	C:\Windows\system32\apphelp.dll
+0x57f20000 - 0x57f34000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\jli.dll
+0x76c30000 - 0x76d68000 	C:\Windows\system32\USER32.dll
+0x75600000 - 0x75755000 	C:\Windows\system32\GDI32.dll
+0x57f00000 - 0x57f13000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\VCRUNTIME140.dll
+0x73d50000 - 0x73e31000 	C:\Windows\SYSTEM32\ucrtbase.dll
+0x6a330000 - 0x6a53f000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_d3c2e4e965da4528\COMCTL32.dll
+0x77070000 - 0x7712e000 	C:\Windows\system32\msvcrt.dll
+0x779e0000 - 0x77b9d000 	C:\Windows\system32\combase.dll
+0x77210000 - 0x772d2000 	C:\Windows\system32\RPCRT4.dll
+0x753a0000 - 0x753f8000 	C:\Windows\system32\bcryptPrimitives.dll
+0x76c00000 - 0x76c2f000 	C:\Windows\system32\IMM32.DLL
+0x572a0000 - 0x5730f000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\msvcp140.dll
+0x555f0000 - 0x55aca000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\client\jvm.dll
+0x75480000 - 0x754fb000 	C:\Windows\system32\ADVAPI32.dll
+0x76f00000 - 0x76f44000 	C:\Windows\system32\sechost.dll
+0x77140000 - 0x77146000 	C:\Windows\system32\PSAPI.DLL
+0x73430000 - 0x73438000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x77160000 - 0x771bf000 	C:\Windows\system32\WS2_32.dll
+0x733d0000 - 0x733f4000 	C:\Windows\SYSTEM32\WINMM.dll
+0x6ef40000 - 0x6ef48000 	C:\Windows\SYSTEM32\VERSION.dll
+0x733a0000 - 0x733c3000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x74bd0000 - 0x74c07000 	C:\Windows\system32\cfgmgr32.dll
+0x74980000 - 0x7498c000 	C:\Windows\system32\kernel.appcore.dll
+0x68150000 - 0x6815d000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\verify.dll
+0x6ba10000 - 0x6bb4f000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x6af80000 - 0x6afa1000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x57800000 - 0x57822000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\java.dll
+0x58bb0000 - 0x58bb9000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\jimage.dll
+0x57eb0000 - 0x57ec4000 	C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_d3c2e4e965da4528;C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin\client
+
+VM Arguments:
+jvm_args: --add-modules=ALL-SYSTEM --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -Dfile.encoding=utf8 -DwatchParentProcess=false -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xverify:none 
+java_command: c:\Users\Sabrina\.vscode\extensions\redhat.java-1.6.0-win32-ia32\server\plugins\org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar -configuration c:\Users\Sabrina\AppData\Roaming\Code\User\globalStorage\redhat.java\1.6.0\config_ss_win -data c:\Users\Sabrina\AppData\Roaming\Code\User\workspaceStorage\efbd7a491cc8d681b5752d61acbfedea\redhat.java\ss_ws
+java_class_path (initial): c:\Users\Sabrina\.vscode\extensions\redhat.java-1.6.0-win32-ia32\server\plugins\org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+    uintx AdaptiveSizePolicyWeight                 = 90                                        {product} {command line}
+     bool BytecodeVerificationLocal                = false                                     {product} {command line}
+     bool BytecodeVerificationRemote               = false                                     {product} {command line}
+    uintx GCTimeRatio                              = 4                                         {product} {command line}
+   size_t InitialHeapSize                          = 104857600                                 {product} {command line}
+   size_t MaxHeapSize                              = 1073741824                                {product} {command line}
+   size_t MaxNewSize                               = 357826560                                 {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 262144                                    {product} {ergonomic}
+   size_t NewSize                                  = 34865152                                  {product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 0                                      {pd product} {ergonomic}
+   size_t OldSize                                  = 69992448                                  {product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+     bool ThreadLocalHandshakes                    = false                                  {pd product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+     bool UseParallelGC                            = true                                      {product} {command line}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686
+PATH=C:\Program Files\java\zulu11.54.25-ca-jdk11.0.14.1-win_i686\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\ProgramData\UNIVALI\Portugol Studio;C:\Program Files\Git\cmd;C:\Users\Sabrina\AppData\Local\Programs\Python\Python39-32\Scripts\;C:\Users\Sabrina\AppData\Local\Programs\Python\Python39-32\;C:\Program Files\JetBrains\PyCharm Community Edition 2018.3.7\bin;;C:\Users\Sabrina\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.3.4\bin;
+USERNAME=Sabrina
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 Build 10586 (10.0.10586.0)
+OS uptime: 0 days 2:00 hours
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7 microcode 0x29, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 3493M (773M free)
+TotalPageFile size 3493M (AvailPageFile size 8M), user-mode portion of virtual address-space 2047M (899M free)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 142M, peak: 142M
+
+vm_info: OpenJDK Client VM (11.0.14.1+1-LTS) for windows-x86 JRE (Zulu11.54+25-CA) (11.0.14.1+1-LTS), built on Feb  7 2022 20:22:53 by "zulu_re" with MS VC++ 15.9 (VS2017)
+
+END.
